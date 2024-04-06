@@ -49,3 +49,4 @@ $$
 $$
 C_{Final} = C_1+C_2
 $$
+![GraphAlgorithm](Images/Artboard%201.png)
