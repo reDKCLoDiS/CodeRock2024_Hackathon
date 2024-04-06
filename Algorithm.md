@@ -49,4 +49,6 @@ $$
 $$
 C_{Final} = C_1+C_2
 $$
+
+Визуальное представление алгоритма
 ![GraphAlgorithm](Images/Artboard%201.png)
