@@ -1,0 +1,164 @@
+.regModal-window__info {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.regModal-window__userSide {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-around;
+  margin-left: 171px;
+  margin-right: 171px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.underline {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background-color: #000;
+    width: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .regModal-window__userSideLabel,
+  .regModal-window__manufacturerSideLabel {
+    cursor: pointer;
+}
+
+.nav__input {
+  display: flex;
+  margin-left: 80px;
+}
+
+.nav__inputManufacturerStock {
+  display: flex;
+  margin-top: 15px;
+  visibility: hidden;
+}
+
+.nameListOfStocks {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.modal-window__nav {
+  margin-top: 30px;
+}
+
+.nav__modal-windowInpuTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin-left: 110px;
+}
+
+.nav__userErrorModal {
+  visibility: hidden;
+  color: #fc0000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.nav__modal-windowInput {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding-left: 45px;
+  width: 530px;
+  height: 90px;
+  border: 1px solid rgba(205, 205, 205, 0.5);
+  outline: none;
+  border-radius: 15px;
+  background-color: #fafafa;
+}
+.regModal-window {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  visibility: visible;
+  opacity: 1;
+  --transition-time: 0.3s;
+  transition: opacity var(--transition-time) ease-in-out;
+
+  .regModal-window__container {
+    position: relative;
+    background-color: #ffffff;
+    border: 2px solid rgba(205, 205, 205, 0.5);
+    left: 560px;
+    top: 90px;
+    width: 800px;
+    height: 700px;
+    border-radius: 45px;
+    transform: scale(0.8);
+    transition: transform var(--transition-time) ease-in-out;
+
+    &.is-open {
+      transform: scale(1);
+    }
+  }
+}
+
+.modal-window__btn {
+  position: absolute;
+  background-color: #fc74ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  width: 580px;
+  height: 90px;
+  bottom: 50px;
+  margin-left: 110px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.nav__manufacturerErrorModal {
+  visibility: hidden;
+  color: #fc0000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.manufacturerStockSelector ul {
+  z-index: 1000;
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.manufacturerStockSelector ul li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.manufacturerStockSelector ul li:hover {
+  background-color: #f0f0f0;
+}

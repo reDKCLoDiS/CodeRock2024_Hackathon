@@ -1,0 +1,85 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'modal.css' %}">
+<!DOCTYPE html>
+<script src="{% static 'modal.js' %}"></script>   
+<link rel="stylesheet" href="modal.css" />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+/>
+<script src="modal.js"></script>
+<div id="regModal" class="regModal-window">
+  <div id="regModal-container" class="container regModal-window__container">
+    <a class="regModal-window__info">Регистрация</a>
+    <span class="regModal-window__userSide">
+      <label id="userLabel" class="regModal-window__userSideLabel"
+        >Пользователь</label
+      >
+      <label
+        id="manufacturerLabel"
+        class="regModal-window__manufacturerSideLabel"
+        >Поставщик</label
+      >
+    </span>
+    <div id="underline" class="underline"></div>
+    <nav class="nav modal-window__nav">
+      <a class="nav__modal-windowInpuTitle">Никнейм</a>
+      <span class="nav__input">
+        <label id="userNameErrorRegModal" class="nav__userErrorModal">!</label>
+        <input
+          id="userNameInput"
+          class="nav__modal-windowInput"
+          placeholder="User"
+        />
+      </span>
+      <a class="nav__modal-windowInpuTitle">Пароль</a>
+      <span class="nav__input">
+        <label id="userPasswordErrorRegModal" class="nav__userErrorModal"
+          >!</label
+        >
+        <input
+          id="userPasswordInput"
+          class="nav__modal-windowInput"
+          placeholder="qwerty123"
+        />
+      </span>
+      <span class="nav__inputManufacturerStock">
+        <a class="nav__modal-windowInpuTitle">Выберите склад/склады</a>
+        <label
+          id="manufacturerStockErrorRegModal"
+          class="nav__manufacturerErrorModal"
+          >!</label
+        >
+        <div class="manufacturerStockSelector" id="manufacturerStockSelector">
+          <label class="nameListOfStocks" id="toggleStocks">
+            Склады
+          </label>
+          <ul>
+            <li>
+              <label>
+                <input class="stock" type="checkbox" value="" />
+                Склад 1
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="stock" type="checkbox" value="" />
+                Склад 2
+              </label>
+            </li>
+            <li>
+              <label>
+                <input class="stock" type="checkbox" value="" />
+                Склад 3
+              </label>
+            </li>
+          </ul>
+        </div>
+      </span>
+
+      <button id="registration" class="modal-window__btn">
+        Зарегистрироваться
+      </button>
+    </nav>
+  </div>
+</div>
