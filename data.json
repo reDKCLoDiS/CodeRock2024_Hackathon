@@ -191,11 +191,6 @@
             "Length": 0.685
         },
         {
-            "Graph_from": 1,
-            "Graph_to": 17,
-            "Length": 0.9
-        },
-        {
             "Graph_from": 12,
             "Graph_to": 30,
             "Length": 0.5
@@ -204,6 +199,208 @@
             "Graph_from": 20,
             "Graph_to": 7,
             "Length": 0
+        }
+    ],
+    "cost": [
+        {
+            "Graph_from": 0,
+            "Graph_to": 1,
+            "cost": 50
+        },
+        {
+            "Graph_from": 0,
+            "Graph_to": 2,
+            "cost": 300
+        },
+        {
+            "Graph_from": 0,
+            "Graph_to": 4,
+            "cost": 50
+        },
+        {
+            "Graph_from": 0,
+            "Graph_to": 7,
+            "cost": 50
+        },
+        {
+            "Graph_from": 0,
+            "Graph_to": 9,
+            "cost": 50
+        },
+        {
+            "Graph_from": 0,
+            "Graph_to": 11,
+            "cost": 50
+        },
+        {
+            "Graph_from": 0,
+            "Graph_to": 10,
+            "cost": 300
+        },
+        {
+            "Graph_from": 0,
+            "Graph_to": 6,
+            "cost": 300
+        },
+        {
+            "Graph_from": 1,
+            "Graph_to": 2,
+            "cost": 50
+        },
+        {
+            "Graph_from": 1,
+            "Graph_to": 6,
+            "cost": 50
+        },
+        {
+            "Graph_from": 2,
+            "Graph_to": 3,
+            "cost": 250
+        },
+        {
+            "Graph_from": 3,
+            "Graph_to": 14,
+            "cost": 25
+        },
+        {
+            "Graph_from": 3,
+            "Graph_to": 4,
+            "cost": 25
+        },
+        {
+            "Graph_from": 4,
+            "Graph_to": 29,
+            "cost": 25
+        },
+        {
+            "Graph_from": 4,
+            "Graph_to": 16,
+            "cost": 25
+        },
+        {
+            "Graph_from": 4,
+            "Graph_to": 5,
+            "cost": 10
+        },
+        {
+            "Graph_from": 5,
+            "Graph_to": 8,
+            "cost": 250
+        },
+        {
+            "Graph_from": 5,
+            "Graph_to": 15,
+            "cost": 25
+        },
+        {
+            "Graph_from": 8,
+            "Graph_to": 7,
+            "cost": 50
+        },
+        {
+            "Graph_from": 8,
+            "Graph_to": 12,
+            "cost": 50
+        },
+        {
+            "Graph_from": 7,
+            "Graph_to": 12,
+            "cost": 50
+        },
+        {
+            "Graph_from": 9,
+            "Graph_to": 26,
+            "cost": 50
+        },
+        {
+            "Graph_from": 12,
+            "Graph_to": 11,
+            "cost": 300
+        },
+        {
+            "Graph_from": 10,
+            "Graph_to": 31,
+            "cost": 25
+        },
+        {
+            "Graph_from": 10,
+            "Graph_to": 22,
+            "cost": 25
+        },
+        {
+            "Graph_from": 10,
+            "Graph_to": 24,
+            "cost": 25
+        },
+        {
+            "Graph_from": 10,
+            "Graph_to": 25,
+            "cost": 25
+        },
+        {
+            "Graph_from": 10,
+            "Graph_to": 11,
+            "cost": 50
+        },
+        {
+            "Graph_from": 10,
+            "Graph_to": 6,
+            "cost": 50
+        },
+        {
+            "Graph_from": 6,
+            "Graph_to": 23,
+            "cost": 25
+        },
+        {
+            "Graph_from": 6,
+            "Graph_to": 21,
+            "cost": 10
+        },
+        {
+            "Graph_from": 6,
+            "Graph_to": 28,
+            "cost": 25
+        },
+        {
+            "Graph_from": 1,
+            "Graph_to": 18,
+            "cost": 10
+        },
+        {
+            "Graph_from": 1,
+            "Graph_to": 17,
+            "cost": 10
+        },
+        {
+            "Graph_from": 1,
+            "Graph_to": 19,
+            "cost": 25
+        },
+        {
+            "Graph_from": 1,
+            "Graph_to": 13,
+            "cost": 50
+        },
+        {
+            "Graph_from": 1,
+            "Graph_to": 27,
+            "cost": 0
+        },
+        {
+            "Graph_from": 13,
+            "Graph_to": 32,
+            "cost": 10
+        },
+        {
+            "Graph_from": 12,
+            "Graph_to": 30,
+            "cost": 25
+        },
+        {
+            "Graph_from": 20,
+            "Graph_to": 7,
+            "cost": 10
         }
     ],
     "information": {
