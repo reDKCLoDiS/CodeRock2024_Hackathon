@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     var toggleStocks = document.getElementById('toggleStocks');
     var stockList = document.querySelector('.manufacturerStockSelector ul');
-
+    
     var isOpen = false; 
     if(toggleStocks){
         toggleStocks.addEventListener('click', function(event) {
