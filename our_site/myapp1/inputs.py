@@ -1,13 +1,13 @@
 from django import forms
 class InputForm(forms.Form):
-    login = forms.CharField(label="", max_length=20, widget=forms.TextInput(attrs={
+    login = forms.CharField(label="", max_length=20, required=False, widget=forms.TextInput(attrs={
         'id':"userNameInput",
-        'class':"nav__modal-windowInputUserName",
+        'class':"nav__modal-windowInput",
         'placeholder':"User"}))
 class PasswordForm(forms.Form):
-    password = forms.CharField(label="", max_length=20, widget=forms.TextInput(attrs={
-        'id':"userNameInput",
-        'class':"nav__modal-windowInputUserPassword",
+    password = forms.CharField(label="", max_length=20, required=False, widget=forms.TextInput(attrs={
+        'id':"userPasswordInput",
+        'class':"nav__modal-windowInput",
         'placeholder':"qwerty123"}))
 
 class SideForm(forms.Form):

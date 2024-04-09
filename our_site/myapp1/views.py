@@ -33,10 +33,10 @@ def get_login(request):
             elif side_value == 'seller':
                 pass
         
-        print(warehousesform.data)
+        print(login_value, password_value)
 
         return render(request, 'account_define.html', \
-                  {'login_form': login_form, 'password_form': password_form, 'warehouses_form': warehouses_value})#, 'side_form': side_form
+                  {'login_form': login_form, 'password_form': password_form,})#, 'side_form': side_form
 
 def settings(request):
     if request.method == "POST":
