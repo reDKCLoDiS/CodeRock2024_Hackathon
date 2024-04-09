@@ -20,4 +20,5 @@ from myapp1.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', get_login),
-]
+    path('excel/',check_user,name="check_user"),\
+        ]

@@ -14,23 +14,17 @@ class PasswordForm(forms.Form):
 class SideForm(forms.Form):
     side = forms.ChoiceField(choices={'seller':'seller', 'buyer':'buyer'}, required=False)
 
-class WarehousesForm(forms.Form):
-    warehouses = forms.MultipleChoiceField(
-        required=False,
-        widget=forms.CheckboxSelectMultiple,
-        choices={str(i): str(i) for i in range(3)})
-
 class WarehousesForm1(forms.Form):
     #warehouse = forms.CheckboxInput(attrs={})
-    warehouse = forms.BooleanField(required=False,label='Склад 1')
+    warehouse1 = forms.BooleanField(required=False,label='Склад 1')
 
 class WarehousesForm2(forms.Form):
     #warehouse = forms.CheckboxInput(attrs={})
-    warehouse = forms.BooleanField(required=False,label='Склад 2')
+    warehouse2 = forms.BooleanField(required=False,label='Склад 2')
 
 class WarehousesForm3(forms.Form):
     #warehouse = forms.CheckboxInput(attrs={})
-    warehouse = forms.BooleanField(required=False,label='Склад 3')
+    warehouse3 = forms.BooleanField(required=False,label='Склад 3')
 
         
         

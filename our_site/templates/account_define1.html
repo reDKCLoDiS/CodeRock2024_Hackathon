@@ -25,13 +25,14 @@
       <a class="nav__modal-windowInpuTitle">Никнейм</a>
       <span class="nav__input">
         <label id="userNameErrorRegModal" class="nav__userErrorModal">!</label>
+        {% csrf_token %}
         {{login_form}}
       </span>
       <a class="nav__modal-windowInpuTitle">Пароль</a>
       <span class="nav__input">
         <label id="userPasswordErrorRegModal" class="nav__userErrorModal"
-          >!</label
-        >
+          >!</label>
+        {% csrf_token %}
         {{password_form}}
       </span>
       <span class="nav__inputManufacturerStock">
@@ -48,29 +49,28 @@
           <ul>
             <li>
               <label>
-                <input class="stock" type="checkbox" value="" />
-                Склад 1
+                {{warehouse1_form}}
               </label>
             </li>
             <li>
               <label>
-                <input class="stock" type="checkbox" value="" />
-                Склад 2
+                {{warehouse2_form}}
               </label>
             </li>
             <li>
               <label>
-                <input class="stock" type="checkbox" value="" />
-                Склад 3
+                {{warehouse3_form}}
               </label>
             </li>
           </ul>
         </div>
       </span>
-
-      <button id="registration" class="modal-window__btn">
-        Зарегистрироваться
-      </button>
+      <form action="" method="post">
+        {% csrf_token %}
+        <button id="registration" class="modal-window__btn">
+          Зарегистрироваться
+        </button>
+      </form>
     </nav>
   </div>
 </div>
