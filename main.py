@@ -7,15 +7,8 @@ if __name__ == "__main__":
     data = open('data.json')
     graph = json.load(data)
     data.close()
-    print("time")
     for i in graph["distance"]:
-        print(f"{i['Graph_from']}, {i['Graph_to']}, {i['Length']}\n")
-        dist.addEdge(i['Graph_from'], i['Graph_to'], i['Length'])
-    #print(graph)
-    print("cost")
-    for i in graph["cost"]:
-        print(f"{i['Graph_from']}, {i['Graph_to']}, {i['cost']}\n")
-        cost.addEdge(i['Graph_from'], i['Graph_to'], i['cost'])
-    print("info")
-    for i in graph["information"]:
-        print(graph["information"][i])
+        dist.addEdge(i['Graph_from'], i['Graph_to'], i['Length'], i['cost'])
+    for i in graph["distance"]:
+        cost.addEdge(i['Graph_from'], i['Graph_to'], i['cost'], i['Length'])
+    print(f"lowest time: {dist.shortestPath(31, 15)},\nlowest price: {cost.shortestPath(31, 15)}")

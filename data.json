@@ -3,403 +3,242 @@
         {
             "Graph_from": 0,
             "Graph_to": 1,
-            "Length": 7.95
-        },
-        {
-            "Graph_from": 0,
-            "Graph_to": 2,
-            "Length": 5.54
-        },
-        {
-            "Graph_from": 0,
-            "Graph_to": 4,
-            "Length": 6.65
-        },
-        {
-            "Graph_from": 0,
-            "Graph_to": 7,
-            "Length": 0.9
-        },
-        {
-            "Graph_from": 0,
-            "Graph_to": 9,
-            "Length": 3
-        },
-        {
-            "Graph_from": 0,
-            "Graph_to": 11,
-            "Length": 6.435
-        },
-        {
-            "Graph_from": 0,
-            "Graph_to": 10,
-            "Length": 8.63
-        },
-        {
-            "Graph_from": 0,
-            "Graph_to": 6,
-            "Length": 5.47
-        },
-        {
-            "Graph_from": 1,
-            "Graph_to": 2,
-            "Length": 5.825
-        },
-        {
-            "Graph_from": 1,
-            "Graph_to": 6,
-            "Length": 5.44
-        },
-        {
-            "Graph_from": 2,
-            "Graph_to": 3,
-            "Length": 3.715
-        },
-        {
-            "Graph_from": 3,
-            "Graph_to": 14,
-            "Length": 1
-        },
-        {
-            "Graph_from": 3,
-            "Graph_to": 4,
-            "Length": 0.825
-        },
-        {
-            "Graph_from": 4,
-            "Graph_to": 29,
-            "Length": 0
-        },
-        {
-            "Graph_from": 4,
-            "Graph_to": 16,
-            "Length": 1.3
-        },
-        {
-            "Graph_from": 4,
-            "Graph_to": 5,
-            "Length": 0.5
-        },
-        {
-            "Graph_from": 5,
-            "Graph_to": 8,
-            "Length": 5
-        },
-        {
-            "Graph_from": 5,
-            "Graph_to": 15,
-            "Length": 0.6
-        },
-        {
-            "Graph_from": 8,
-            "Graph_to": 7,
-            "Length": 3.14
-        },
-        {
-            "Graph_from": 8,
-            "Graph_to": 12,
-            "Length": 6.55
-        },
-        {
-            "Graph_from": 7,
-            "Graph_to": 12,
-            "Length": 7.5
-        },
-        {
-            "Graph_from": 9,
-            "Graph_to": 26,
-            "Length": 2.91
-        },
-        {
-            "Graph_from": 12,
-            "Graph_to": 11,
-            "Length": 5.45
-        },
-        {
-            "Graph_from": 10,
-            "Graph_to": 31,
-            "Length": 2.85
-        },
-        {
-            "Graph_from": 10,
-            "Graph_to": 22,
-            "Length": 2.85
-        },
-        {
-            "Graph_from": 10,
-            "Graph_to": 24,
-            "Length": 2.85
-        },
-        {
-            "Graph_from": 10,
-            "Graph_to": 25,
-            "Length": 2.85
-        },
-        {
-            "Graph_from": 10,
-            "Graph_to": 11,
-            "Length": 5.395
-        },
-        {
-            "Graph_from": 10,
-            "Graph_to": 6,
-            "Length": 6.52
-        },
-        {
-            "Graph_from": 6,
-            "Graph_to": 23,
-            "Length": 1.5
-        },
-        {
-            "Graph_from": 6,
-            "Graph_to": 21,
-            "Length": 0.69
-        },
-        {
-            "Graph_from": 6,
-            "Graph_to": 28,
-            "Length": 0.3
-        },
-        {
-            "Graph_from": 1,
-            "Graph_to": 18,
-            "Length": 1.35
-        },
-        {
-            "Graph_from": 1,
-            "Graph_to": 17,
-            "Length": 0.9
-        },
-        {
-            "Graph_from": 1,
-            "Graph_to": 19,
-            "Length": 2.955
-        },
-        {
-            "Graph_from": 1,
-            "Graph_to": 13,
-            "Length": 3
-        },
-        {
-            "Graph_from": 1,
-            "Graph_to": 27,
-            "Length": 0
-        },
-        {
-            "Graph_from": 13,
-            "Graph_to": 32,
-            "Length": 0.685
-        },
-        {
-            "Graph_from": 12,
-            "Graph_to": 30,
-            "Length": 0.5
-        },
-        {
-            "Graph_from": 20,
-            "Graph_to": 7,
-            "Length": 0
-        }
-    ],
-    "cost": [
-        {
-            "Graph_from": 0,
-            "Graph_to": 1,
+            "Length": 7.95,
             "cost": 50
         },
         {
             "Graph_from": 0,
             "Graph_to": 2,
+            "Length": 5.54,
             "cost": 300
         },
         {
             "Graph_from": 0,
             "Graph_to": 4,
+            "Length": 6.65,
             "cost": 50
         },
         {
             "Graph_from": 0,
             "Graph_to": 7,
+            "Length": 0.9,
             "cost": 50
         },
         {
             "Graph_from": 0,
             "Graph_to": 9,
+            "Length": 3,
             "cost": 50
         },
         {
             "Graph_from": 0,
             "Graph_to": 11,
+            "Length": 6.435,
             "cost": 50
         },
         {
             "Graph_from": 0,
             "Graph_to": 10,
+            "Length": 8.63,
             "cost": 300
         },
         {
             "Graph_from": 0,
             "Graph_to": 6,
+            "Length": 5.47,
             "cost": 300
         },
         {
             "Graph_from": 1,
             "Graph_to": 2,
+            "Length": 5.825,
             "cost": 50
         },
         {
             "Graph_from": 1,
             "Graph_to": 6,
+            "Length": 5.44,
             "cost": 50
         },
         {
             "Graph_from": 2,
             "Graph_to": 3,
+            "Length": 3.715,
             "cost": 250
         },
         {
             "Graph_from": 3,
             "Graph_to": 14,
+            "Length": 1,
             "cost": 25
         },
         {
             "Graph_from": 3,
             "Graph_to": 4,
+            "Length": 0.825,
             "cost": 25
         },
         {
             "Graph_from": 4,
             "Graph_to": 29,
+            "Length": 0,
             "cost": 25
         },
         {
             "Graph_from": 4,
             "Graph_to": 16,
+            "Length": 1.3,
             "cost": 25
         },
         {
             "Graph_from": 4,
             "Graph_to": 5,
+            "Length": 0.5,
             "cost": 10
         },
         {
             "Graph_from": 5,
             "Graph_to": 8,
+            "Length": 5,
             "cost": 250
         },
         {
             "Graph_from": 5,
             "Graph_to": 15,
+            "Length": 0.6,
             "cost": 25
         },
         {
             "Graph_from": 8,
             "Graph_to": 7,
+            "Length": 3.14,
             "cost": 50
         },
         {
             "Graph_from": 8,
             "Graph_to": 12,
+            "Length": 6.55,
             "cost": 50
         },
         {
             "Graph_from": 7,
             "Graph_to": 12,
+            "Length": 7.5,
             "cost": 50
         },
         {
             "Graph_from": 9,
             "Graph_to": 26,
+            "Length": 2.91,
             "cost": 50
+
         },
         {
             "Graph_from": 12,
             "Graph_to": 11,
+            "Length": 5.45,
             "cost": 300
         },
         {
             "Graph_from": 10,
             "Graph_to": 31,
+            "Length": 2.85,
             "cost": 25
         },
         {
             "Graph_from": 10,
             "Graph_to": 22,
+            "Length": 2.85,
             "cost": 25
         },
         {
             "Graph_from": 10,
             "Graph_to": 24,
+            "Length": 2.85,
             "cost": 25
         },
         {
             "Graph_from": 10,
             "Graph_to": 25,
+            "Length": 2.85,
             "cost": 25
         },
         {
             "Graph_from": 10,
             "Graph_to": 11,
+            "Length": 5.395,
             "cost": 50
         },
         {
             "Graph_from": 10,
             "Graph_to": 6,
+            "Length": 6.52,
             "cost": 50
         },
         {
             "Graph_from": 6,
             "Graph_to": 23,
+            "Length": 1.5,
             "cost": 25
         },
         {
             "Graph_from": 6,
             "Graph_to": 21,
+            "Length": 0.69,
             "cost": 10
         },
         {
             "Graph_from": 6,
             "Graph_to": 28,
+            "Length": 0.3,
             "cost": 25
         },
         {
             "Graph_from": 1,
             "Graph_to": 18,
+            "Length": 1.35,
             "cost": 10
         },
         {
             "Graph_from": 1,
             "Graph_to": 17,
+            "Length": 0.9,
             "cost": 10
         },
         {
             "Graph_from": 1,
             "Graph_to": 19,
+            "Length": 2.955,
             "cost": 25
         },
         {
             "Graph_from": 1,
             "Graph_to": 13,
+            "Length": 3,
             "cost": 50
         },
         {
             "Graph_from": 1,
             "Graph_to": 27,
+            "Length": 0,
             "cost": 0
         },
         {
             "Graph_from": 13,
             "Graph_to": 32,
+            "Length": 0.685,
             "cost": 10
         },
         {
             "Graph_from": 12,
             "Graph_to": 30,
+            "Length": 0.5,
             "cost": 25
         },
         {
             "Graph_from": 20,
             "Graph_to": 7,
+            "Length": 0,
             "cost": 10
         }
     ],
