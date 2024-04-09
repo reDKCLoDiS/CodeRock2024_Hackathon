@@ -1,13 +1,12 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'modal.css' %}">
 <!DOCTYPE html>
-<script src="{% static 'modal.js' %}"></script>   
-<link rel="stylesheet" href="modal.css" />
+<link rel="stylesheet" href="{% static 'modal.css' %}">
+<link rel="stylesheet" href="{% static 'modal.js' %}">
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 />
-<script src="modal.js"></script>
+<script src="static/modal.js"></script>
 <div id="regModal" class="regModal-window">
   <div id="regModal-container" class="container regModal-window__container">
     <a class="regModal-window__info">Регистрация</a>
@@ -49,29 +48,27 @@
           <ul>
             <li>
               <label>
-                <input class="stock" type="checkbox" value="" />
-                Склад 1
+                {{warehouse1_form}}
               </label>
             </li>
             <li>
               <label>
-                <input class="stock" type="checkbox" value="" />
-                Склад 2
+                {{warehouse2_form}}
               </label>
             </li>
             <li>
               <label>
-                <input class="stock" type="checkbox" value="" />
-                Склад 3
+                {{warehouse3_form}}
               </label>
             </li>
           </ul>
         </div>
       </span>
-
-      <button id="registration" class="modal-window__btn">
-        Зарегистрироваться
-      </button>
+      <form action="/your-name/" method="post">
+        <button id="registration" class="modal-window__btn">
+          Зарегистрироваться
+        </button>
+      </form>
     </nav>
   </div>
 </div>

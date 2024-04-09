@@ -1,13 +1,12 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'modal.css' %}">
 <!DOCTYPE html>
-<script src="{% static 'modal.js' %}"></script>   
-<link rel="stylesheet" href="modal.css" />
+<link rel="stylesheet" href="{% static 'modal.css' %}">
+<link rel="stylesheet" href="{% static 'modal.js' %}">
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 />
-<script src="modal.js"></script>
+<script src="static/modal.js"></script>
 <div id="regModal" class="regModal-window">
   <div id="regModal-container" class="container regModal-window__container">
     <a class="regModal-window__info">Регистрация</a>
@@ -26,22 +25,14 @@
       <a class="nav__modal-windowInpuTitle">Никнейм</a>
       <span class="nav__input">
         <label id="userNameErrorRegModal" class="nav__userErrorModal">!</label>
-        <input
-          id="userNameInput"
-          class="nav__modal-windowInput"
-          placeholder="User"
-        />
+        {{login_form}}
       </span>
       <a class="nav__modal-windowInpuTitle">Пароль</a>
       <span class="nav__input">
         <label id="userPasswordErrorRegModal" class="nav__userErrorModal"
           >!</label
         >
-        <input
-          id="userPasswordInput"
-          class="nav__modal-windowInput"
-          placeholder="qwerty123"
-        />
+        {{password_form}}
       </span>
       <span class="nav__inputManufacturerStock">
         <a class="nav__modal-windowInpuTitle">Выберите склад/склады</a>
