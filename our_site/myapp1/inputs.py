@@ -26,5 +26,9 @@ class WarehousesForm3(forms.Form):
     #warehouse = forms.CheckboxInput(attrs={})
     warehouse3 = forms.BooleanField(required=False,label='Склад 3')
 
-        
-        
+class EmailInput(forms.Form):
+    email = forms.CharField(label="", max_length=20, required=False, widget=forms.TextInput(attrs={\
+        'type':"text",
+        'class':"userMailInput",
+        'id':"userMailInput",
+        'placeholder':"example@mail.com"}))

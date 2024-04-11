@@ -1,76 +1,298 @@
 {% load static %}
 <!DOCTYPE html>
-<link rel="stylesheet" href="{% static 'modal.css' %}">
-<link rel="stylesheet" href="{% static 'modal.js' %}">
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-/>
-<script src="static/modal.js"></script>
-<div id="regModal" class="regModal-window">
-  <div id="regModal-container" class="container regModal-window__container">
-    <a class="regModal-window__info">Регистрация</a>
-    <span class="regModal-window__userSide">
-      <label id="userLabel" class="regModal-window__userSideLabel"
-        >Пользователь</label
-      >
-      <label
-        id="manufacturerLabel"
-        class="regModal-window__manufacturerSideLabel"
-        >Поставщик</label
-      >
-    </span>
-    <div id="underline" class="underline"></div>
-    <nav class="nav modal-window__nav">
-      <a class="nav__modal-windowInpuTitle">Никнейм</a>
-      <span class="nav__input">
-        <label id="userNameErrorRegModal" class="nav__userErrorModal">!</label>
-        {% csrf_token %}
-        {{login_form}}
-      </span>
-      <a class="nav__modal-windowInpuTitle">Пароль</a>
-      <span class="nav__input">
-        <label id="userPasswordErrorRegModal" class="nav__userErrorModal"
-          >!</label>
-        {% csrf_token %}
-        {{password_form}}
-      </span>
-      <span class="nav__inputManufacturerStock">
-        <a class="nav__modal-windowInpuTitle">Выберите склад/склады</a>
-        <label
-          id="manufacturerStockErrorRegModal"
-          class="nav__manufacturerErrorModal"
-          >!</label
-        >
-        <div class="manufacturerStockSelector" id="manufacturerStockSelector">
-          <label class="nameListOfStocks" id="toggleStocks">
-            Склады
-          </label>
-          <ul>
-            <li>
-              <label>
-                {{warehouse1_form}}
-              </label>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'script.js' %}">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#111111" />
+    <title>reDK</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
+  </head>
+  <body>
+    <div class="site-container">
+      <header class="header">
+        <div class="container header__container">
+          <a class="logo header__logo">reDK</a>
+          <div class="filters">
+            <span id="productFiltersToggle" class="productFilters">
+              <a class="productFiltersTitle">Фильтры</a>
+              <img class="productFiltersImg" src="{% static 'pngwing.png' %}" />
+            </span>
+            <div class="сategoryfilter">
+              <ul>
+                <li>
+                  <label><input type="checkbox" />Категория 1</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <input
+            type="text"
+            class="seacrhBar"
+            id="seacrhBar"
+            placeholder="Найти на reDK"
+          />
+          <span id="loginBtn" class="loginSpan">
+            <img class="loginSpanImg" src="{% static 'icons8-user-24.png' %}" />
+            <a class="loginSpanTitle">Войти</a>
+          </span>
+        </div>
+      </header>
+      <main class="main">
+        <div class="products-content grid-container">
+          <ul class="products-grid">
+            <li class="products-grid__item">
+              <article class="product">
+                <h3 class="product__title">
+                  <a class="title">Шкаф</a>
+                </h3>
+                <a class="product__image">
+                  
+                </a>
+                <div class="product__info">
+                  <a class="product__term">Размеры: </a>
+                  <a class="product__volume">90x100x50</a>
+                </div>
+                <div class="product__info">
+                  <a class="product__term">Масса: </a>
+                  <a class="product__weight">5кг</a>
+                </div>
+                <div class="product__price product-price">
+                  <span class="product-price">1 600 ₽</span>
+                </div>
+                <button class="product__btn btn">Заказать</button>
+              </article>
             </li>
-            <li>
-              <label>
-                {{warehouse2_form}}
-              </label>
+            <li class="products-grid__item">
+              <article class="product">
+                <h3 class="product__title">
+                  <a class="title">Шкаф</a>
+                </h3>
+                <a class="product__image">
+                  <div class="image-switch__img">
+                  </div>
+                </a>
+                <div class="product__info">
+                  <a class="product__term">Размеры: </a>
+                  <a class="product__carMake">90x100x50</a>
+                </div>
+                <div class="product__info">
+                  <a class="product__term">Масса: </a>
+                  <a class="carMake__model">5кг</a>
+                </div>
+                <div class="product__price product-price">
+                  <span class="product-price__current">1 600 ₽</span>
+                </div>
+                <button class="product__btn btn">Заказать</button>
+              </article>
             </li>
-            <li>
-              <label>
-                {{warehouse3_form}}
-              </label>
+            <li class="products-grid__item">
+              <article class="product">
+                <h3 class="product__title">
+                  <a class="title">Шкаф</a>
+                </h3>
+                <a class="product__image">
+                  <div class="image-switch__img">
+                  </div>
+                </a>
+                <div class="product__info">
+                  <a class="product__term">Размеры: </a>
+                  <a class="product__carMake">90x100x50</a>
+                </div>
+                <div class="product__info">
+                  <a class="product__term">Масса: </a>
+                  <a class="carMake__model">5кг</a>
+                </div>
+                <div class="product__price product-price">
+                  <span class="product-price__current">1 600 ₽</span>
+                </div>
+                <button class="product__btn btn">Заказать</button>
+              </article>
+            </li>
+            <li class="products-grid__item">
+              <article class="product">
+                <h3 class="product__title">
+                  <a class="title">Шкаф</a>
+                </h3>
+                <a class="product__image">
+                  <div class="image-switch__img">
+                  </div>
+                </a>
+                <div class="product__info">
+                  <a class="product__term">Размеры: </a>
+                  <a class="product__carMake">90x100x50</a>
+                </div>
+                <div class="product__info">
+                  <a class="product__term">Масса: </a>
+                  <a class="carMake__model">5кг</a>
+                </div>
+                <div class="product__price product-price">
+                  <span class="product-price__current">1 600 ₽</span>
+                </div>
+                <button class="product__btn btn">Заказать</button>
+              </article>
+            </li>
+            <li class="products-grid__item">
+              <article class="product">
+                <h3 class="product__title">
+                  <a class="title">Шкаф</a>
+                </h3>
+                <a class="product__image">
+                  <div class="image-switch__img">
+                  </div>
+                </a>
+                <div class="product__info">
+                  <a class="product__term">Размеры: </a>
+                  <a class="product__carMake">90x100x50</a>
+                </div>
+                <div class="product__info">
+                  <a class="product__term">Масса: </a>
+                  <a class="carMake__model">5кг</a>
+                </div>
+                <div class="product__price product-price">
+                  <span class="product-price__current">1 600 ₽</span>
+                </div>
+                <button class="product__btn btn">Заказать</button>
+              </article>
             </li>
           </ul>
         </div>
-      </span>
-      <form action="" method="post">
-        {% csrf_token %}
-        <button id="registration" class="modal-window__btn">
-          Зарегистрироваться
-        </button>
-      </form>
-    </nav>
-  </div>
-</div>
+      </main>
+    </div>
+
+    <div id="entryModal" class="entryModal-window">
+      <div
+        id="entryModal-container"
+        class="container entryModal-window__container"
+      >
+        <a class="entryModal-window__info">Войти или создать аккаунт</a>
+        <span class="inputEmail">
+          <label id="userEmailErrorRegModal" class="nav__userErrorEntryModal"
+            >!</label
+          >
+          <input
+            type="text"
+            class="userMailInput"
+            id="userMailInput"
+            placeholder="example@mail.com"
+          />
+        </span>
+        <button class="entryButton" id="entryButton">Войти</button>
+      </div>
+    </div>
+
+    <div id="regModal" class="regModal-window">
+      <div id="regModal-container" class="container regModal-window__container">
+        <a class="regModal-window__info">Регистрация</a>
+        <span class="regModal-window__userSide">
+          <label id="userLabel" class="regModal-window__userSideLabel"
+            >Пользователь</label
+          >
+          <label
+            id="manufacturerLabel"
+            class="regModal-window__manufacturerSideLabel"
+            >Поставщик</label
+          >
+        </span>
+        <div id="underline" class="underline"></div>
+        <nav class="nav modal-window__nav">
+          <a class="nav__modal-windowInpuTitle">Никнейм</a>
+          <span class="nav__input">
+            <label id="userNameErrorRegModal" class="nav__userErrorModal"
+              >!</label
+            >
+            <input
+              id="userNameInput"
+              class="nav__modal-windowInput"
+              placeholder="User"
+            />
+          </span>
+          <a class="nav__modal-windowInpuTitle">Пароль</a>
+          <span class="nav__input">
+            <label id="userPasswordErrorRegModal" class="nav__userErrorModal"
+              >!</label
+            >
+            <input
+              id="userPasswordInput"
+              class="nav__modal-windowInput"
+              placeholder="qwerty123"
+            />
+          </span>
+          <span class="nav__inputManufacturerStock">
+            <a class="nav__modal-windowInpuTitle">Выберите склад/склады</a>
+            <label
+              id="manufacturerStockErrorRegModal"
+              class="nav__manufacturerErrorModal"
+              >!</label
+            >
+            <div
+              class="manufacturerStockSelector"
+              id="manufacturerStockSelector"
+            >
+              <label class="nameListOfStocks" id="toggleStocks"> Склады </label>
+              <ul>
+                <li>
+                  <label>
+                    <input class="stock" type="checkbox" value="" />
+                    Склад 1
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="stock" type="checkbox" value="" />
+                    Склад 2
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input class="stock" type="checkbox" value="" />
+                    Склад 3
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </span>
+
+          <button id="registration" class="modal-window__btn">
+            Зарегистрироваться
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <div id="loginModal" class="loginModal-window">
+      <div
+        id="loginModal-container"
+        class="container loginModal-window__container"
+      >
+        <a class="loginModal-window__info">Вход</a>
+        <span class="inputLoginPassword">
+          <a class="inputPasswordTitle">Пароль</a>
+          <input
+            type="text"
+            class="userLoginPasswordInput"
+            id="userLoginPasswordInput"
+            placeholder="qwerty123"
+          />
+        </span>
+
+        <label id="userPasswordErrorLoginModal" class="nav__userErrorLoginModal"
+          >Забыли пароль?</label
+        >
+        <button class="loginButton" id="loginButton">Войти</button>
+      </div>
+    </div>
+  </body>
+</html>
