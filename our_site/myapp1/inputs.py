@@ -32,3 +32,6 @@ class EmailInput(forms.Form):
         'class':"userMailInput",
         'id':"userMailInput",
         'placeholder':"example@mail.com"}))
+
+class NameForm(forms.Form):
+    your_name = forms.CharField(label="Your name", max_length=100)

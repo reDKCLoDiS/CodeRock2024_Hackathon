@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="{% static 'style.css' %}">
 <link rel="stylesheet" href="{% static 'script.js' %}">
-<form>
+<form method="post">
+  {% csrf_token %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -181,6 +182,7 @@
         <span class="inputEmail">
           <label id="userEmailErrorRegModal" class="nav__userErrorEntryModal"
             >!</label>
+            
           {{email_input_form}}
           
         </span>
@@ -249,7 +251,7 @@
             </div>
           </span>
 
-          <button id="registration" class="modal-window__btn" onclick="location.href='{% url 'get_login' %}'">
+          <button type = 'submit' id="registration" class="modal-window__btn" onclick="location.href='{% url 'get_login' %}'">
             Зарегистрироваться
           </button>
         </nav>

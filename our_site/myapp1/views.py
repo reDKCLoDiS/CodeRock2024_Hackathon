@@ -11,6 +11,7 @@ import datetime
 def get_login(request):
     
     if request.method == "POST":
+        print('post')
         login_form = InputForm(request.POST)
         password_form = PasswordForm(request.POST)
         warehouse1_form = WarehousesForm1(request.POST)
@@ -18,17 +19,21 @@ def get_login(request):
         warehouse3_form = WarehousesForm3(request.POST)
         email_input_form = EmailInput(request.POST)
     else:
-        login_form = InputForm(request.GET)
-        password_form = PasswordForm(request.GET)
-        warehouse1_form = WarehousesForm1(request.GET)
-        warehouse2_form = WarehousesForm2(request.GET)
-        warehouse3_form = WarehousesForm3(request.GET)
-        email_input_form = EmailInput(request.GET)
+        print('get')
+        login_form = InputForm()
+        password_form = PasswordForm()
+        warehouse1_form = WarehousesForm1()
+        warehouse2_form = WarehousesForm2()
+        warehouse3_form = WarehousesForm3()
+        email_input_form = EmailInput()
+
     login_value, password_value = \
         login_form.data.get('login'), password_form.data.get('password')
     warehouse1_value, warehouse2_value, warehouse3_value, =\
         warehouse1_form.data.get('warehouse1'), warehouse2_form.data.get('warehouse2'), warehouse3_form.data.get('warehouse3')
+    print(email_input_form.data)
     email_input_value = email_input_form.data.get('email')
+
     database_file = open(r'myapp1/DB.json')
     database = json.load(database_file)
     database_file.close()
@@ -36,11 +41,10 @@ def get_login(request):
     database_file_email = open(r'myapp1/DB_email.json')
     database_email = json.load(database_file_email)
     database_file_email.close()
+    
     print(database_email.values(),email_input_value)
     if email_input_value != None and email_input_value != 'null' and email_input_value != '' and email_input_value in database_email.values(): 
-        '''ВОТ ТУТ РЕДАЧИТЬ'''
-        #return redirect(request.META.get('',''))
-
+        print(True)
     
     elif (login_value != None and password_value != None and email_input_value != None) and \
          (str(login_value) != 'null' and str(password_value) != 'null' and email_input_value != 'null') and \
@@ -70,7 +74,7 @@ def get_login(request):
 
             database_file_email.close()
             database_file.close()
-    
+    print('end')
     
     return render(request, 'main-page.html', \
             {'login_form': login_form, 'password_form': password_form, 
@@ -78,4 +82,20 @@ def get_login(request):
             'warehouse3_form': warehouse3_form, 'email_input_form': email_input_form})#, 'side_form': side_form
 
 
-    
+def get_login2(request):
+    if request.method == "POST":
+        # create a form instance and populate it with data from the request:
+        form = NameForm(request.POST)
+        
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            print(form.data)
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = NameForm()
+    print(form.data)
+    return render(request, "index.html", {"form": form})
