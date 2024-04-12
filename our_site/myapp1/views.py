@@ -43,7 +43,6 @@ class User_Define:
             client_ip, is_routable = get_client_ip(request)
             self.ip_base[str(client_ip)] = email_input_value
             self.ip_base_pick_up_points[str(client_ip)] = nearest_pick_up_point
-            print(email_input_value)
             if email_input_value in database_email.keys():
                 return HttpResponseRedirect('/main-page')
             else:
@@ -73,7 +72,6 @@ class User_Define:
             warehouse4_form = WarehousesForm4()
             warehouse5_form = WarehousesForm5()
 
-        print(login_form.data)
         login_value, password_value = \
             login_form.data.get('login'), password_form.data.get('password')
         warehouse1_value, warehouse2_value, warehouse3_value, =\
@@ -161,7 +159,6 @@ class User_Define:
         for storage in storages:
             
             if cheapest_way.data.get('cheapest_way')=='on':
-                print('on')
                 _, price, _ = cost.shortestPath(storage, nearest_pick_up_point)
                 ways_dict[price] = storage
             else:
