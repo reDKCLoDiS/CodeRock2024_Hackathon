@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'script.js' %}">
+<form method="post">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#111111" />
+    <title>reDK</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <script src="{% static 'script.js' %}"></script>
+  </head>
+  <body>
+    <div id="loginModal" class="loginModal-window">
+      <div
+        id="loginModal-container"
+        class="container loginModal-window__container"
+      >
+        <a class="loginModal-window__info">Вход</a>
+        
+        <span class="inputLoginPassword">
+          <a class="inputPasswordTitle">Почта</a>
+          {% csrf_token %}
+          {{email_input_form}}
+        </span>
+
+        <label id="userPasswordErrorLoginModal" class="nav__userErrorLoginModal"
+          >Забыли пароль?</label
+        >
+        <button class="loginButton" id="loginButton">Войти</button>
+      </div>
+    </div>
+  </body>
+</html>
+</form>

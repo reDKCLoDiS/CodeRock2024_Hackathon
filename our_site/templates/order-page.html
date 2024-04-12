@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="{% static 'style2.css' %}">
+<link rel="stylesheet" href="{% static 'script2.js' %}">
+<form method="post">
+  
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#111111" />
+    <title>reDK</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    />
+    <link rel="stylesheet" href="{% static 'style2.css' %}" />
+    <script src="{% static 'script2.js' %}"></script>
+  </head>
+  <body>
+    <div class="site-container">
+      <header class="header">
+        <div class="container header__container">
+          <a class="logo header__logo" href="main-page">reDK</a>
+        </div>
+      </header>
+      <div id="order-container" class="container order-window__container">
+        <a class="orderInfo">Оформление заказа</a>
+        <a class="orderProductInfo">Товар</a>
+        <li class="order-content__item">
+          <article class="order-content__product order-product" data-id="${id}">
+            <img src="${img}" alt="фото" class="order-product__img" />
+            <div class="order-product__text">
+              <a class="order-product__title">Название</a>
+              <a class="order-product__title">Размеры</a>
+              <a class="order-product__title">Масса</a>
+              <a class="order-product__title">Стоимость</a>
+            </div>
+            <a class="order-product__decription">Описание</a>
+          </article>
+        </li>
+
+        <span class="DeliveryInfo">
+          <span id="chooseDelivery" class="chooseDelivery">
+            <span>
+              <a class="chooseDelivery__title">Выберите доставку</a>
+              <img class="chooseDeliveryImg" src="{% static 'pngwing_black.png'%}" />
+            </span>
+            <div class="deliveryTypes">
+              <ul>
+                <li>
+                  {%csrf_token%}
+                  {{ fastetst_way }}
+                </li>
+                <li>
+                  {%csrf_token%}
+                  {{ cheapest_way }}
+                </li>
+              </ul>
+            </div>
+          </span>
+          <span class="characteristic">
+              <button class="calculatePrice">Расчитать заказ</button>
+                <span class="order-price">
+                  <a class="order-product__price">Финальная стоимость:</a>
+                  <a class="order-product__price">{{price}}</a>
+                </span>
+                <span class="path-title">
+                </span>
+          </span>
+        </span>
+          <button type="button" class="confirmDelivery" onclick="document.location='main-page'">Оформить заказ</button>
+      </div>
+    </div>
+  </body>
+</html>
+</form>

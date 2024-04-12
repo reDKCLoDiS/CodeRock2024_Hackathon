@@ -26,12 +26,25 @@ class WarehousesForm3(forms.Form):
     #warehouse = forms.CheckboxInput(attrs={})
     warehouse3 = forms.BooleanField(required=False,label='Склад 3')
 
+class WarehousesForm4(forms.Form):
+    #warehouse = forms.CheckboxInput(attrs={})
+    warehouse4 = forms.BooleanField(required=False,label='Склад 4')
+
+class WarehousesForm5(forms.Form):
+    #warehouse = forms.CheckboxInput(attrs={})
+    warehouse5 = forms.BooleanField(required=False,label='Склад 5')
+
 class EmailInput(forms.Form):
     email = forms.CharField(label="", max_length=20, required=False, widget=forms.TextInput(attrs={\
         'type':"text",
-        'class':"userMailInput",
-        'id':"userMailInput",
+        'class':"userLoginPasswordInput",
+        'id':"userLoginPasswordInput",
         'placeholder':"example@mail.com"}))
+    
+class Fastetst_way(forms.Form):
+    #warehouse = forms.CheckboxInput(attrs={})
+    fastetst_way = forms.BooleanField(required=False,label='Самая быстрая')
 
-class NameForm(forms.Form):
-    your_name = forms.CharField(label="Your name", max_length=100)
+class Cheapest_way(forms.Form):
+    #warehouse = forms.CheckboxInput(attrs={})
+    cheapest_way = forms.BooleanField(required=False,label='Самая дешёвая')

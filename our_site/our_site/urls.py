@@ -19,9 +19,16 @@ from myapp1.views import *
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.views.generic.base import RedirectView
 
+user_define = User_Define()
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_login),
-    path('',get_login,name="get_login"),\
+    path('', user_define.info_page_function),
+    path('login-page', user_define.get_login),
+    path('registration', user_define.registration),
+    path('main-page', user_define.main_page_function),
+    path('order-page', user_define.order),
+    path('',user_define.get_login,name="get_login"),\
+    
     #path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('favicon/favicon.ico')))
  ]

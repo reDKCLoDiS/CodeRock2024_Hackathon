@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'script.js' %}">
+<form action='' method="post">
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#111111" />
+    <title>reDK</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+    />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <script src="{% static 'script.js' %}"></script>
+  </head>
+  <body>
+    <div id="regModal" class="regModal-window">
+      <div id="regModal-container" class="container regModal-window__container">
+        <a class="regModal-window__info">Регистрация</a>
+        <span class="regModal-window__userSide">
+          <label id="userLabel" class="regModal-window__userSideLabel"
+            >Пользователь</label
+          >
+          <label
+            id="manufacturerLabel"
+            class="regModal-window__manufacturerSideLabel"
+            >Поставщик</label
+          >
+        </span>
+        <div id="underline" class="underline"></div>
+        <nav class="nav modal-window__nav">
+          <a class="nav__modal-windowInpuTitle">Никнейм</a>
+          <span class="nav__input">
+            <label id="userNameErrorRegModal" class="nav__userErrorModal"
+              >!</label
+            >
+            {%csrf_token%}
+            {{login_form}}
+          </span>
+          <a class="nav__modal-windowInpuTitle">Пароль</a>
+          <span class="nav__input">
+            <label id="userPasswordErrorRegModal" class="nav__userErrorModal"
+              >!</label
+            >
+            {%csrf_token%}
+            {{password_form}}
+          </span>
+          <span class="nav__inputManufacturerStock">
+            <a class="nav__modal-windowInpuTitle">Выберите склад/склады</a>
+            <label
+              id="manufacturerStockErrorRegModal"
+              class="nav__manufacturerErrorModal"
+              >!</label
+            >
+            <div
+              class="manufacturerStockSelector"
+              id="manufacturerStockSelector"
+            >
+              <label class="nameListOfStocks" id="toggleStocks"> Склады </label>
+              <ul>
+                <li>
+                  <label>
+                    {{warehouse1_form}}
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    {{warehouse2_form}}
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    {{warehouse3_form}}
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    {{warehouse4_form}}
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    {{warehouse5_form}}
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </span>
+
+          <button id="registration" class="modal-window__btn">
+            Зарегистрироваться
+          </button>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
+</form>
