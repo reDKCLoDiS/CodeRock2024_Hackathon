@@ -1,9 +1,9 @@
 import json
-from dijkstra import Graph
+from dijkstra import Graph, Graph2
 if __name__ == "__main__":
     V = 2**18
     dist = Graph(V)
-    cost = Graph(V)
+    cost = Graph2(V)
     data = open('data.json')
     graph = json.load(data)
     data.close()

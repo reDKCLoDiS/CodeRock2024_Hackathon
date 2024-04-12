@@ -7,7 +7,7 @@ class Graph:
 		self.V = V
 		self.adj = [[] for _ in range(V)]
 
-	def addEdge(self, u: int, v: int, w: int, c: int):
+	def addEdge(self, u: int, v: int, w: int, c: int = 150):
 		self.adj[u].append((v, w, c))
 		self.adj[v].append((u, w, c))
 
@@ -19,6 +19,7 @@ class Graph:
 		dist = [float('inf')] * self.V
 		dist[src] = 0
 		costs[src] = 0
+		us = []
 
 		while pq:
 
@@ -29,11 +30,43 @@ class Graph:
 				if dist[v] > dist[u] + weight:
 					costs[v] = costs[u] + cost
 					dist[v] = dist[u] + weight
+					us.append(u)
 					heapq.heappush(pq, (dist[v], v))
+		res = [i for n, i in enumerate(us) if i not in us[:n]]
+		return dist[goal], costs[goal], res
 
-		for i in range(goal+1):
-			if (i == goal):
-			    print(f"{dist[i]}, {costs[i]}")
+class Graph2:
+	def __init__(self, V: int):
+		self.V = V
+		self.adj = [[] for _ in range(V)]
+
+	def addEdge(self, u: int, v: int, w: int, c: int = 150):
+		self.adj[u].append((v, w, c))
+		self.adj[v].append((u, w, c))
+
+	def shortestPath(self, src: int, goal: int):
+
+		pq = []
+		heapq.heappush(pq, (0, src))
+		costs = [float('inf')] * self.V
+		dist = [float('inf')] * self.V
+		dist[src] = 0
+		costs[src] = 0
+		us = []
+
+		while pq:
+
+			d, u = heapq.heappop(pq)
+
+			for v, weight, cost in self.adj[u]:
+
+				if dist[v] > dist[u] + weight:
+					costs[v] = costs[u] + cost
+					dist[v] = dist[u] + weight
+					us.append(u)
+					heapq.heappush(pq, (dist[v], v))
+		res = [i for n, i in enumerate(us) if i not in us[:n]]
+		return costs[goal], dist[goal], res
 
 if __name__ == "__main__":
 
