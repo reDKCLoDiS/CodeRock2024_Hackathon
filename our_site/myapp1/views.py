@@ -167,8 +167,8 @@ class User_Define:
         
         best = min(ways_dict.keys())
         best_storage = ways_dict[best]
-        _, price, _ = cost.shortestPath(best_storage, nearest_pick_up_point)
+        way, price, points = cost.shortestPath(best_storage, nearest_pick_up_point)
         
-        return render(request, 'order-page.html', {'fastetst_way': fastetst_way, 'cheapest_way': cheapest_way, 'price': price})
+        return render(request, 'order-page.html', {'fastetst_way': fastetst_way, 'cheapest_way': cheapest_way, 'price': price, 'way': way, 'points': str(points)[1:-1]})
     def info_page_function(self, request):
         return render(request, 'info-page.html')

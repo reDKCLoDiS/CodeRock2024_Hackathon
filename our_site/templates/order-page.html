@@ -56,6 +56,7 @@
                 <li>
                   {%csrf_token%}
                   {{ fastetst_way }}
+
                 </li>
                 <li>
                   {%csrf_token%}
@@ -67,10 +68,12 @@
           <span class="characteristic">
               <button class="calculatePrice">Расчитать заказ</button>
                 <span class="order-price">
-                  <a class="order-product__price">Финальная стоимость:</a>
-                  <a class="order-product__price">{{price}}</a>
+                  <a class="order-product__price">Финальная стоимость, время:</a>
+                  <a class="order-product__price">{{price}}, {{way}}</a>
                 </span>
                 <span class="path-title">
+                  <a class="path-title">Путь:</a>
+                  <a class="order-product__price">{{points}}</a>
                 </span>
           </span>
         </span>
