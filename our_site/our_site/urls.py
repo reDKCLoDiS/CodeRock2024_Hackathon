@@ -29,6 +29,5 @@ urlpatterns = [
     path('main-page', user_define.main_page_function),
     path('order-page', user_define.order),
     path('',user_define.get_login,name="get_login"),\
-    
     #path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('favicon/favicon.ico')))
  ]
